@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palpite Futebolístico Sério 2024 Rodada 11</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #000;
+        }
+        .match {
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .match:last-child {
+            border-bottom: none;
+        }
+        .vote {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .vote button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .vote button:hover {
+            background-color: #555;
+        }
+        .results {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .profile-select {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .profile-select label {
+            margin-bottom: 5px;
+        }
+        .profile-select select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Palpite Futebolístico Sério 2024 Rodada 11</h1>
+        <form id="voteForm">
+            <div class="profile-select">
+                <label for="profile">Selecione seu perfil:</label>
+                <select id="profile" name="profile" required>
+                    <option value="" disabled selected>Escolha um perfil</option>
+                    <option value="Lew">Lew</option>
+                    <option value="Felipe">Felipe</option>
+                    <option value="Bené">Bené</option>
+                    <option value="refzin">refzin</option>
+                </select>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Criciúma x Botafogo</span>
+                    <div>
+                        <button type="button" onclick="vote('match1', 'Criciúma')">Criciúma</button>
+                        <button type="button" onclick="vote('match1', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match1', 'Botafogo')">Botafogo</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match1"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Grêmio x Internacional</span>
+                    <div>
+                        <button type="button" onclick="vote('match2', 'Grêmio')">Grêmio</button>
+                        <button type="button" onclick="vote('match2', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match2', 'Internacional')">Internacional</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match2"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Cuiabá x Atlético-GO</span>
+                    <div>
+                        <button type="button" onclick="vote('match3', 'Cuiabá')">Cuiabá</button>
+                        <button type="button" onclick="vote('match3', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match3', 'Atlético-GO')">Atlético-GO</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match3"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Vasco x São Paulo</span>
+                    <div>
+                        <button type="button" onclick="vote('match4', 'Vasco')">Vasco</button>
+                        <button type="button" onclick="vote('match4', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match4', 'São Paulo')">São Paulo</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match4"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Bahia x Cruzeiro</span>
+                    <div>
+                        <button type="button" onclick="vote('match5', 'Bahia')">Bahia</button>
+                        <button type="button" onclick="vote('match5', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match5', 'Cruzeiro')">Cruzeiro</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match5"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Athletico-PR x Corinthians</span>
+                    <div>
+                        <button type="button" onclick="vote('match6', 'Athletico-PR')">Athletico-PR</button>
+                        <button type="button" onclick="vote('match6', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match6', 'Corinthians')">Corinthians</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match6"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Fluminense x Flamengo</span>
+                    <div>
+                        <button type="button" onclick="vote('match7', 'Fluminense')">Fluminense</button>
+                        <button type="button" onclick="vote('match7', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match7', 'Flamengo')">Flamengo</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match7"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Bragantino x Vitória</span>
+                    <div>
+                        <button type="button" onclick="vote('match8', 'Bragantino')">Bragantino</button>
+                        <button type="button" onclick="vote('match8', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match8', 'Vitória')">Vitória</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match8"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Atlético-MG x Fortaleza</span>
+                    <div>
+                        <button type="button" onclick="vote('match9', 'Atlético-MG')">Atlético-MG</button>
+                        <button type="button" onclick="vote('match9', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match9', 'Fortaleza')">Fortaleza</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match9"></div>
+            </div>
+
+            <div class="match">
+                <div class="vote">
+                    <span>Palmeiras x Juventude</span>
+                    <div>
+                        <button type="button" onclick="vote('match10', 'Palmeiras')">Palmeiras</button>
+                        <button type="button" onclick="vote('match10', 'Empate')">Empate</button>
+                        <button type="button" onclick="vote('match10', 'Juventude')">Juventude</button>
+                    </div>
+                </div>
+                <div class="results" id="result_match10"></div>
+            </div>
+        </form>
+    </div>
+    <script>
+        const votes = {
+            match1: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match2: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match3: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match4: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match5: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match6: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match7: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match8: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match9: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+            match10: { Lew: '', Felipe: '', Bené: '', refzin: '' },
+        };
+
+        function vote(matchId, team) {
+            const profile = document.getElementById('profile').value;
+            if (!profile) {
+                alert('Por favor, selecione um perfil antes de votar.');
+                return;
+            }
+            votes[matchId][profile] = team;
+            updateResults(matchId);
+        }
+
+        function updateResults(matchId) {
+            const resultElement = document.getElementById('result_' + matchId);
+            const matchVotes = votes[matchId];
+            resultElement.innerHTML = `
+                Lew votou em: ${matchVotes.Lew}<br>
+                Felipe votou em: ${matchVotes.Felipe}<br>
+                Bené votou em: ${matchVotes.Bené}<br>
+                refzin votou em: ${matchVotes.refzin}
+            `;
+        }
+    </script>
+</body>
+</html>
